@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation';
 
 const Page = () => {
   
-  const backendURL = process.env.NEXT_PUBLIC_BACKEND_BASEURL;
   const router = useRouter();
 
 

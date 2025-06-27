@@ -15,7 +15,6 @@ const Page = () => {
     const [priority, setPriority] = useState("Low");
     const [dueDate, setDate] = useState("");
     const [startDate, setStartDate] = useState("");
-    const [newChecklist, setNewChecklist] = useState("");
     const [checkList, setChecklist] = useState([]);
 
   const params= useParams()

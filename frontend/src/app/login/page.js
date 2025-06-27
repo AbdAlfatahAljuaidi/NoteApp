@@ -1,5 +1,5 @@
 'use client'
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import image from '@/../public/Pictures/Sign.jpg'
 import axios from 'axios'
 import { toast } from 'react-toastify';
@@ -7,11 +7,9 @@ import { useRouter } from 'next/navigation';
 
 const Page = () => {
   
-  const backendURL = process.env.NEXT_PUBLIC_BACKEND_BASEURL;
   const router = useRouter();
 
 
-  const [username , setUsername]= useState()
   const [email,setEmail]=useState()
   const [password,setPassword]=useState()
   const [isLoading, setIsLoading] = useState(false);

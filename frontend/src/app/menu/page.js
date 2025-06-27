@@ -9,7 +9,6 @@ import axios from 'axios';
 import { useRouter, usePathname } from 'next/navigation';
 
 const Page = () => {
-  const [active, setActive] = useState("")
   const [info, setInfo] = useState({})
   const [open, setOpen] = useState(false)
   const router = useRouter();
