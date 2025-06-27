@@ -4,6 +4,7 @@ import image from '@/../public/Pictures/Sign.jpg'
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link'
 
 const Page = () => {
   
@@ -78,6 +79,12 @@ if(data.error==false){
           {isLoading ? 'Logging in' : "Login"}
           </button>
         </div>
+        <div className="text-center mt-4">
+  <span className="text-gray-600">Don't have an account? </span>
+  <Link href="/" className="text-blue-600 hover:underline">
+    Sign Up
+  </Link>
+</div>
       </div>
     </section>
   )

@@ -4,6 +4,7 @@ import image from '@/../public/Pictures/Sign.jpg'
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Page = () => {
   
@@ -72,6 +73,13 @@ router.push('/login');
           className="border border-black block mt-5 w-[300px] rounded-xl p-2  focus:bg-white/70"
           onChange={(e)=>setPassword(e.target.value)}
         />
+        
+<div className="text-center mt-4">
+  <span className="text-gray-600">Already have an account? </span>
+  <Link href="/login" className="text-blue-600 hover:underline">
+    Login
+  </Link>
+</div>
 
         <div className="flex justify-center">
           <button disabled={isLoading} className={`bg-blue-500  text-white rounded-lg py-2 px-7 mt-6 hover:bg-blue-600 transition ${isLoading ? 'opacity-50 cursor-not-allowed' :'hover:cursor-pointer'}`} onClick={SignUp}>
