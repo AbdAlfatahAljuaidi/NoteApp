@@ -11,7 +11,7 @@ require('dotenv').config()
 app.use(cookieParser())
 
 app.use(cors({
-  origin: 'http://localhost:3000', // رابط الفرونت
+  origin: process.env.ORIGIN, // رابط الفرونت
   credentials: true                // ضروري للسماح بإرسال الكوكيز
 }))
 
