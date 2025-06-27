@@ -70,7 +70,7 @@ if (!isMatch) {
 
 res.cookie('token', token, {
   httpOnly: true,
-  secure: false, // true فقط إذا تستخدم HTTPS
+  secure: true, // true فقط إذا تستخدم HTTPS
   maxAge: 3 * 24 * 60 * 60 * 1000 // 3 أيام
 })
 
