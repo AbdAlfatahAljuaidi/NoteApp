@@ -10,9 +10,16 @@ require('dotenv').config()
 
 app.use(cookieParser())
 
+// التعامل مع preflight requests
+app.options('*', cors({
+  origin: process.env.ORIGIN,
+  credentials: true
+}))
+
+// تفعيل CORS مع إرسال الكوكيز
 app.use(cors({
-  origin: process.env.ORIGIN, // رابط الفرونت
-  credentials: true                // ضروري للسماح بإرسال الكوكيز
+  origin: process.env.ORIGIN,
+  credentials: true
 }))
 
 app.use(express.json())
