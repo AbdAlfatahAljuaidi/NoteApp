@@ -66,13 +66,12 @@ if (!isMatch) {
   const token = jwt.sign(
     { id: existingUser._id, email: existingUser.email , username:existingUser.username }
 ,process.env.JWT_SECRET,{expiresIn:process.env.JWT_EXPIRES_IN}  )
-
-
 res.cookie('token', token, {
   httpOnly: true,
-  secure: true, // true فقط إذا تستخدم HTTPS
-  maxAge: 3 * 24 * 60 * 60 * 1000 // 3 أيام
-})
+  secure: true, // ضروري إذا تستخدم https
+  sameSite: 'None', // يسمح بالإرسال عبر النطاقات
+  maxAge: 24 * 60 * 60 * 1000 // 1 يوم مثلاً
+});
 
 
 
